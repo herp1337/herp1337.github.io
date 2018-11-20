@@ -1,0 +1,41 @@
+<body bgcolor="black"></body>
+<style>
+body {
+ padding: 0;
+ margin: 0;
+ background-image: url("");
+ background-repeat:no-repeat;
+ background-position:center;
+ background-size: 100% 100%;
+}
+input { 
+width: 250px;
+	height: 33px;
+	color: white;
+	background: black;
+	border: 1px dotted #2ACBF3;
+	padding: 5px;
+	margin-left: 20px;
+	text-align: center;
+ }
+button {
+width: 130px;
+	height: 40px;
+	color: yellow;
+	background: black;
+	border: 1px dotted #2ACBF3;
+	padding: 5px;
+	margin-left: 20px;
+	}
+	</style>
+	<center><h1><font color="White">CSRF 0.97</font></h1></center>
+	<hr style="color: lime;"></hr><font color="red"><h1><tt>By HeroBrinePE!<br></tt>
+	<center><font color="yellow">::Lock On::<br><input id="site" placeholder="Enter Target"></input><input placeholder="method (ex:POST/files[]/etc)" id="Method"></input><br><button onclick="ups()">Lock Target</center>
+<p id="cont"></p>
+	<script>
+situs=document.getElementById("site").value;
+xrs=document.getElementById("Method").value;
+function ups(){
+document.getElementById("cont").innerHTML="<pre><center>Launch Missile<br><form method='post' target='_blank' action='"+situs+"' enctype='multipart/form-data'><input type='file' name='"+xrs+"'><br><br><input type='submit' name='g' value='Launch Missile'></form>";
+}
+</script>
