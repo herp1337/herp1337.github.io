@@ -30,18 +30,19 @@ width: 130px;
 	</style>
 	<center><h1><font color="White">Reverse IP</font></h1></center>
 	<hr style="color: lime;"></hr><font color="red"><h1><tt>By HeroBrinePE!<br></tt><center><font color="yellow">::IP::<br><input id="ip" placeholder="Enter IP">
-	</input><button onclick="indonesia()">Lookup!</button><br><h6>
-	<p id="outputs">OUTPUT</p>
+	</input><button onclick="indo()">Lookup!</button><br><h6>
 	<script>
-	function indonesia(){
-	req=new XMLHttpRequest();
-	req.onreadystatechange = function(){
-	if(this.readyState == 4 && this.status == 200){
-	document.getElementById("outputs").innerHTML=this.responseText;
+	function reqListener(){
+	alert()
+	document.write(req.responseText);
 	}
-	};
-	req.open("GET","https://api.hackertarget.com/reverseiplookup/?q="+document.getElementById("ip").value,true);
+	function indo(){
+	document.write("Loading....")
+	req=new XMLHttpRequest();
+	req.addEventListener("load",reqListener);
+	req.open("GET","https://api.hackertarget.com/reverseiplookup/?q="+document.getElementById("ip").value);
 	req.send();
 	}
+	
 	</script>
 	
